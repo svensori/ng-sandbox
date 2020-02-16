@@ -5,6 +5,7 @@ import { AppMaterialModule } from 'src/shared/app-material.module';
 
 import { AppComponent } from './app.component';
 import { NgFormComponent } from './ng-form/ng-form.component';
+import { AppRoutingModule } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { NgFormComponent } from './ng-form/ng-form.component';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     ReactiveFormsModule,
     AppMaterialModule
   ],
