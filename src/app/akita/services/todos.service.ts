@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
+import { resetStores } from '@datorama/akita';
 
 import { createTodo } from '../models/todo.model';
 import { TodosStore } from '../stores/todos.store';
-import { trigger } from '@angular/animations';
-import { resetStores } from '@datorama/akita';
 
 @Injectable({
     providedIn: 'root'
