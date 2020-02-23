@@ -8,8 +8,8 @@
       placeholder="Title"
       type="text" />
   </mat-form-field>
-  <button type="submit">Add Todo</button>
-  <button type="reset" (click)="reset()">Reset Store</button>
+  <button mat-stroked-button color="primary" type="submit">Add Todo</button>
+  <button mat-stroked-button color="warn" type="reset" (click)="reset()">Reset Store</button>
 </form>
 
 <mat-card id="todos">
@@ -17,16 +17,33 @@
   <span class="mat-caption">Click icon to complete</span>
   <mat-list dense>
     <mat-list-item *ngFor="let todo of todos$ | async">
-      <mat-icon mat-list-icon (click)="update(todo.id)">label</mat-icon>
+      <mat-icon mat-list-icon *ngIf="todo.completed" (click)="update(todo.id)">check_box</mat-icon>
+      <mat-icon mat-list-icon *ngIf="!todo.completed" (click)="update(todo.id)">check_box_outline_blank</mat-icon>
       <h4 mat-line [ngStyle]="{'text-decoration': todo.completed ? 'line-through' : 'none'}">{{todo.title}}</h4>
       <mat-divider></mat-divider>
     </mat-list-item>
   </mat-list>
 </mat-card>
 
-<mat-card id="todos-state">
-  <mat-card-header class="mat-title">Todos State:</mat-card-header>
-  <pre class="mat-caption">
-    {{todos$ | async | json}}
-  </pre>
-</mat-card>
+<div class="states">
+  <mat-card id="todos-state">
+    <mat-card-header class="mat-title">Todos State:</mat-card-header>
+    <pre class="mat-caption">
+      {{todos$ | async | json}}
+    </pre>
+  </mat-card>
+  
+  <mat-card id="todos-state-complete">
+    <mat-card-header class="mat-title">Todos State (Complete):</mat-card-header>
+    <pre class="mat-caption">
+      {{todosComplete$ | async | json}}
+    </pre>
+  </mat-card>
+
+  <mat-card id="todos-state-incomplete">
+    <mat-card-header class="mat-title">Todos State (Incomplete):</mat-card-header>
+    <pre class="mat-caption">
+      {{todosIncomplete$ | async | json}}
+    </pre>
+  </mat-card>
+</div>

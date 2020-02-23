@@ -14,6 +14,9 @@ import { TodosService } from '../services/todos.service';
 export class TodosPageComponent implements OnInit {
 
   todos$: Observable<Todo[]>;
+  todosComplete$: Observable<Todo[]>;
+  todosIncomplete$: Observable<Todo[]>;
+
   todoForm = this.formBuilder.group({
     todoTitle: ['', [Validators.required]]
   });
@@ -24,6 +27,8 @@ export class TodosPageComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {
     this.todos$ = this.todosQuery.todos$;
+    this.todosComplete$ =  this.todosQuery.todosComplete$;
+    this.todosIncomplete$ = this.todosQuery.todosIncomplete$;
   }
 
   ngOnInit() { }

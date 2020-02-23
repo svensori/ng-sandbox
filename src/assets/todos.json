@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "title": "Eat breakfast",
+        "completed": false
+    },
+    {
+        "id": 2,
+        "title": "Drink Vitamin",
+        "completed": false
+    },
+    {
+        "id": 3,
+        "title": "Bathe the dog",
+        "completed": false
+    },
+    {
+        "id": 4,
+        "title": "Clean the car",
+        "completed": false
+    },
+    {
+        "id": 5,
+        "title": "Watch a movie",
+        "completed": false
+    }
+]

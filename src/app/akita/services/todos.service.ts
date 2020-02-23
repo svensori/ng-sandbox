@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { resetStores } from '@datorama/akita';
 
-import { createTodo } from '../models/todo.model';
+import { createTodo, Todo } from '../models/todo.model';
 import { TodosStore } from '../stores/todos.store';
+import { HttpClient } from '@angular/common/http';
+import { first, map } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -10,8 +12,21 @@ import { TodosStore } from '../stores/todos.store';
 export class TodosService {
 
     constructor(
-        private todosStore: TodosStore
-    ) { }
+        private todosStore: TodosStore,
+        private http: HttpClient
+    ) {
+        this.fetchTodos();
+    }
+
+    private fetchTodos() {
+        this.http.get('../../../assets/todos.json')
+            .pipe(first())
+            .subscribe(
+                (todos: Todo[]) => {
+                    this.todosStore.set(todos);
+                }
+            );
+    }
 
     add(title: string) {
         const todo = createTodo({
