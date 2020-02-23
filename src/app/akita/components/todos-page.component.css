@@ -1,0 +1,19 @@
+mat-card {
+    margin-bottom: 25px;
+}
+
+mat-card#todos mat-list mat-list-item mat-icon {
+    cursor: pointer;
+}
+
+mat-card#todos > mat-list > mat-list-item mat-icon.completed {
+    color: green;
+}
+
+#todos > mat-list > mat-list-item .matline.completed {
+    text-decoration: line-through;
+}
+
+mat-card#todos-state {
+    background: lightgreen;
+}
