@@ -4,7 +4,6 @@ import { QueryEntity } from '@datorama/akita';
 import { Todo } from '../models/todo.model';
 import { TodoState, TodosStore } from '../stores/todos.store';
 
-
 @Injectable({
     providedIn: 'root'
 })
