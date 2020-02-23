@@ -9,7 +9,12 @@ import { TodoState, TodosStore } from '../stores/todos.store';
 })
 export class TodosQuery extends QueryEntity<TodoState, Todo> {
     todos$ = this.selectAll();
-
+    todosComplete$ = this.selectAll({
+        filterBy: todo => todo.completed
+    });
+    todosIncomplete$ = this.selectAll({
+        filterBy: todo => !todo.completed
+    });
     constructor(protected todosStore: TodosStore) {
         super(todosStore);
     }

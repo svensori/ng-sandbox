@@ -15,5 +15,23 @@ mat-card#todos > mat-list > mat-list-item mat-icon.completed {
 }
 
 mat-card#todos-state {
+    background: lightblue;
+}
+
+mat-card#todos-state-complete {
     background: lightgreen;
+}
+
+mat-card#todos-state-incomplete {
+    background: salmon;
+}
+
+div.states {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+div.states  mat-card {
+    width: 30%;
 }
