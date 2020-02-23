@@ -8,7 +8,8 @@ import { TodosQuery } from '../query/todos.query';
 
 @Component({
   selector: 'app-todos-page',
-  templateUrl: './todos-page.component.html'
+  templateUrl: './todos-page.component.html',
+  styleUrls: ['./todos-page.component.css']
 })
 export class TodosPageComponent implements OnInit {
 
@@ -21,14 +22,22 @@ export class TodosPageComponent implements OnInit {
     private todosService: TodosService,
     private todosQuery: TodosQuery,
     private formBuilder: FormBuilder
-  ) { }
-
-  ngOnInit() {
+  ) {
     this.todos$ = this.todosQuery.todos$;
   }
 
+  ngOnInit() { }
+
   add(todoTitle: string) {
     this.todosService.add(todoTitle);
+  }
+
+  update(id: number) {
+    this.todosService.update(id);
+  }
+
+  reset() {
+    this.todosService.reset();
   }
 
   onSubmit() {
