@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
@@ -8,6 +9,7 @@ import { MatListModule } from '@angular/material/list';
 import { TodosPageComponent } from './components/todos-page.component';
 import { TodosService } from './services/todos.service';
 import { AppStoreModule } from './stores/stores.module';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { AppStoreModule } from './stores/stores.module';
         ReactiveFormsModule,
         MatInputModule,
         MatListModule,
-        MatIconModule
+        MatIconModule,
+        MatDividerModule,
+        MatCardModule
     ],
     exports: [
         TodosPageComponent

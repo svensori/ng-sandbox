@@ -1,27 +1,32 @@
 <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
-  <mat-form-field>
+  <mat-form-field appearance="fill">
     <mat-label>Todo</mat-label>
     <input 
       matInput
+      autocomplete="off"
       formControlName="todoTitle"
+      placeholder="Title"
       type="text" />
   </mat-form-field>
   <button type="submit">Add Todo</button>
+  <button type="reset" (click)="reset()">Reset Store</button>
 </form>
 
-<hr /> 
+<mat-card id="todos">
+  <mat-card-header class="mat-title">Todos:</mat-card-header>
+  <span class="mat-caption">Click icon to complete</span>
+  <mat-list dense>
+    <mat-list-item *ngFor="let todo of todos$ | async">
+      <mat-icon mat-list-icon (click)="update(todo.id)">label</mat-icon>
+      <h4 mat-line [ngStyle]="{'text-decoration': todo.completed ? 'line-through' : 'none'}">{{todo.title}}</h4>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
 
-<h1 class="mat-h1">Todos</h1>
-<mat-list>
-  <mat-list-item *ngFor="let todo of todos$ | async">
-    <mat-icon mat-list-icon>label</mat-icon>
-    <h4 mat-line>{{todo.title}}</h4>
-  </mat-list-item>
-</mat-list>
-
-<hr />
-
-<h1 class="mat-h1">State</h1>
-<pre class="mat-caption">
-  {{todos$ | async | json}}
-</pre>
+<mat-card id="todos-state">
+  <mat-card-header class="mat-title">Todos State:</mat-card-header>
+  <pre class="mat-caption">
+    {{todos$ | async | json}}
+  </pre>
+</mat-card>
