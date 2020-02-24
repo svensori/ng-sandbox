@@ -7,7 +7,7 @@ import { UserLoginValidators } from './validators/login.validator';
 @Component({
   selector: 'app-ng-form',
   templateUrl: './ng-form.component.html',
-  styleUrls: ['./ng-form.component.css']
+  styleUrls: ['./ng-form.component.scss']
 })
 export class NgFormComponent implements OnInit {
   loginForm: FormGroup;
