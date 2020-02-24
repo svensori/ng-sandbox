@@ -1,36 +1,39 @@
+.mat-title {
+    font-weight: 600;
+}
+
+#todos {
+    margin-bottom: 25px;
+
+    mat-icon {
+        cursor: pointer;
+    }
+
+    .matline-completed {
+        text-decoration: line-through;
+    }
+}
+
 .states {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-}
 
-mat-card {
-    margin-bottom: 25px;
-    width: 30%;
+    mat-card {
+        width: 30%;
+        height: auto;
+    }
 
-    &#todos mat-list mat-list-item {
-        mat-icon {
-            cursor: pointer;
-        
-            &.completed {
-                color: green;
-            }
-        }
-        
-        .matline.completed {
-            text-decoration: line-through;
-        }
-    } 
-
-    &#todos-state {
+    #todos-state {
         background: lightblue;
     }
-
-    &#todos-state-complete {
+    
+    #todos-state-complete {
         background: lightgreen;
     }
-
-    &#todos-state-incomplete {
+    
+    #todos-state-incomplete {
         background: salmon;
     }
 }
