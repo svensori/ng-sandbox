@@ -12,6 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { TodosPageComponent } from './components/todos-page.component';
 import { TodosService } from './services/todos.service';
 import { AppStoreModule } from './stores/stores.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AppStoreModule } from './stores/stores.module';
         MatIconModule,
         MatCardModule,
         MatDividerModule,
-        MatButtonModule
+        MatButtonModule,
+        MatToolbarModule
     ],
     exports: [
         TodosPageComponent

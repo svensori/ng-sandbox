@@ -1,5 +1,7 @@
+<mat-toolbar>{{ui.title}}</mat-toolbar>
+
 <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
-  <mat-form-field appearance="fill">
+  <mat-form-field>
     <mat-label>Todo</mat-label>
     <input 
       matInput

@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgFormComponent } from './ng-form.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
     declarations: [NgFormComponent],
@@ -17,7 +18,8 @@ import { NgFormComponent } from './ng-form.component';
         ReactiveFormsModule,
         MatFormFieldModule,
         MatCardModule,
-        MatInputModule
+        MatInputModule,
+        MatToolbarModule
     ],
     exports: [NgFormComponent]
 })
