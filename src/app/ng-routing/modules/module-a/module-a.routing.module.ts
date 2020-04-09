@@ -2,14 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ModACompAComponent } from './components/mod-a-comp-a/mod-a-comp-a.component';
-import { ModACompACanDeactivateGuard } from './components/mod-a-comp-a/mod-a-comp-a.guard';
 import { ModACompAModule } from './components/mod-a-comp-a/mod-a-comp-a.module';
+import { ModuleAComponent } from './module-a.component';
 
 const routes: Routes = [
   {
     path: 'comp-a',
     component: ModACompAComponent,
-    canDeactivate: [ModACompACanDeactivateGuard]
+  },
+  {
+    path: '',
+    component: ModuleAComponent
   }
 ];
 

@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { ModACompAComponent } from './mod-a-comp-a.component';
+import { CanDeactivateDemoComponent } from './can-deactivate-demo.component';
 
 @Injectable()
-export class ModACompACanDeactivateGuard implements CanDeactivate<ModACompAComponent> {
+export class CanDeactivateDemoGuard implements CanDeactivate<CanDeactivateDemoComponent> {
+
+  constructor() { }
+
   canDeactivate(
-    component: ModACompAComponent,
+    component: CanDeactivateDemoComponent,
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
-    if (component.canDeactivate) {
-      return component.canDeactivate();
-    }
-    return true;
+    return component.canDeactivate();
   }
 }

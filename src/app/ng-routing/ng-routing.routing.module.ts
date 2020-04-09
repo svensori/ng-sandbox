@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ModuleAComponent } from './modules/module-a/module-a.component';
 
 const routes: Routes = [
   {
@@ -9,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'mod-a',
     pathMatch: 'full'
   }
 ];
