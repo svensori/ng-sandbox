@@ -19,7 +19,7 @@ export class TodosService {
     }
 
     private fetchTodos() {
-        this.http.get('../../../assets/todos.json')
+        this.http.get('../mock/todos.json')
             .pipe(first())
             .subscribe(
                 (todos: Todo[]) => {
