@@ -8,7 +8,6 @@ export class CanActivateDemoGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
-    // Add some logic here
-    return true;
+    return confirm('Entering CanActivateDemo Component?');
   }
 }

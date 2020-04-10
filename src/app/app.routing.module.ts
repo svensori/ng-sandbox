@@ -7,7 +7,7 @@ import { NgFormComponent } from './ng-form/ng-form.component';
 
 const routes: Routes = [
   {
-    path: 'ng-form',
+    path: 'form',
     component: NgFormComponent
   },
   {
@@ -19,7 +19,7 @@ const routes: Routes = [
     component: CustomOperatorComponent
   },
   {
-    path: 'ng-routing',
+    path: 'routing',
     loadChildren: () => import('./ng-routing/ng-routing.module').then(m => m.NgRoutingModule)
   },
   {
