@@ -1,10 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { resetStores } from '@datorama/akita';
+import { first } from 'rxjs/operators';
 
 import { createTodo, Todo } from '../models/todo.model';
 import { TodosStore } from '../stores/todos.store';
-import { HttpClient } from '@angular/common/http';
-import { first, map } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -19,7 +19,7 @@ export class TodosService {
     }
 
     private fetchTodos() {
-        this.http.get('../mock/todos.json')
+        this.http.get('assets/akita/todos.json')
             .pipe(first())
             .subscribe(
                 (todos: Todo[]) => {
