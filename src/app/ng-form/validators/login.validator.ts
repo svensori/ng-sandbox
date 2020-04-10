@@ -3,7 +3,6 @@ import { AbstractControl } from '@angular/forms';
 export class UserLoginValidators {
     /**
      * Validate username
-     * @param control
      */
     static ValidateUsername(control: AbstractControl) {
         const usernames = [
@@ -21,7 +20,6 @@ export class UserLoginValidators {
 
     /**
      * Validate if username have symbol
-     * @param control
      */
     static ValidateSymbols(control: AbstractControl) {
         const userNameRegex = /^[a-zA-Z0-9]+$/;
