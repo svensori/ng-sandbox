@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<mat-toolbar>Ng Sandbox</mat-toolbar>
+<div class="content">
+  <div class="side">
+    <mat-list role="list">
+      <mat-list-item 
+        role="listitem" 
+        *ngFor="let route of routes"
+        routerLink="{{route.path}}"
+        routerLinkActive="active">
+        {{route.path}}
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="outlet">
+    <router-outlet></router-outlet>
+  </div>
+</div>

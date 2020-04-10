@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { LearningsModule } from 'src/shared/learnings.module';
 
@@ -11,8 +13,10 @@ import { AppRoutingModule } from './app.routing.module';
   ],
   imports: [
     AppRoutingModule,
+    MatToolbarModule,
+    MatListModule,
     BrowserModule,
-    LearningsModule
+    LearningsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

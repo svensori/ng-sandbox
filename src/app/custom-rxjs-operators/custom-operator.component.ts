@@ -22,7 +22,7 @@ export class CustomOperatorComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-    this.numStream.pipe(
+    this.numStream$ = this.numStream.pipe(
       filterNilChoosy([1]),
       debug('numStream')
     ).subscribe(data => {});
@@ -30,6 +30,5 @@ export class CustomOperatorComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.numStream$.unsubscribe();
-    console.log('destroyed');
   }
 }

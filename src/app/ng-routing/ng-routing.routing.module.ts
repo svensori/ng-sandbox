@@ -5,11 +5,6 @@ const routes: Routes = [
   {
     path: 'mod-a',
     loadChildren: () => import('./modules/module-a/module-a.module').then(m => m.ModuleA)
-  },
-  {
-    path: '',
-    redirectTo: 'mod-a',
-    pathMatch: 'full'
   }
 ];
 
