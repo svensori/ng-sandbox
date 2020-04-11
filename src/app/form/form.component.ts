@@ -11,13 +11,10 @@ import { BaseUi } from 'src/shared/models/ui.model';
   styleUrls: ['./form.component.scss']
 })
 export class FormDemoComponent implements OnInit {
-  ui = {
-    title: 'Reactive Form'
-  } as BaseUi;
 
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
