@@ -7,10 +7,10 @@ import { BaseUi } from 'src/shared/models/ui.model';
 
 @Component({
   selector: 'app-ng-form',
-  templateUrl: './ng-form.component.html',
-  styleUrls: ['./ng-form.component.scss']
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.scss']
 })
-export class NgFormComponent implements OnInit {
+export class FormDemoComponent implements OnInit {
   ui = {
     title: 'Reactive Form'
   } as BaseUi;

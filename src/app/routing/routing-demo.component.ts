@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ng-routing',
-  templateUrl: './ng-routing.component.html',
-  styleUrls: ['./ng-routing.component.scss']
+  selector: 'routing-demo',
+  templateUrl: './routing-demo.component.html',
+  styleUrls: ['./routing-demo.component.scss']
 })
 export class NgRoutingComponent implements OnInit {
 

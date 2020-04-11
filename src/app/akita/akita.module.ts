@@ -8,36 +8,38 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { TodosPageComponent } from './components/todos-page.component';
 import { TodosService } from './services/todos.service';
 import { AppStoreModule } from './stores/stores.module';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { AkitaRoutingModule } from './akita.routing.module';
 
 
 @NgModule({
-    declarations: [
-        TodosPageComponent
-    ],
-    imports: [
-        AppStoreModule,
-        CommonModule,
-        FormsModule,
-        HttpClientModule,
-        ReactiveFormsModule,
-        MatListModule,
-        MatInputModule,
-        MatIconModule,
-        MatCardModule,
-        MatDividerModule,
-        MatButtonModule,
-        MatToolbarModule
-    ],
-    exports: [
-        TodosPageComponent
-    ],
-    providers: [
-        TodosService
-    ],
+  declarations: [
+    TodosPageComponent
+  ],
+  imports: [
+    AppStoreModule,
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatListModule,
+    MatInputModule,
+    MatIconModule,
+    MatCardModule,
+    MatDividerModule,
+    MatButtonModule,
+    MatToolbarModule,
+    AkitaRoutingModule
+  ],
+  exports: [
+    TodosPageComponent
+  ],
+  providers: [
+    TodosService
+  ]
 })
 export class AkitaModule { }

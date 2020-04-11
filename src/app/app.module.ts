@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
-import { LearningsModule } from 'src/shared/learnings.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app.routing.module';
     MatToolbarModule,
     MatListModule,
     BrowserModule,
-    LearningsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

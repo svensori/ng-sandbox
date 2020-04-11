@@ -1,26 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { TodosPageComponent } from './akita/components/todos-page.component';
-import { CustomOperatorComponent } from './custom-rxjs-operators/custom-operator.component';
-import { NgFormComponent } from './ng-form/ng-form.component';
-
 const routes: Routes = [
   {
     path: 'form',
-    component: NgFormComponent
+    loadChildren: () => import('./form/form.module').then(m => m.FormDemoModule)
   },
   {
     path: 'akita',
-    component: TodosPageComponent
+    loadChildren: () => import('./akita/akita.module').then(m => m.AkitaModule)
   },
   {
     path: 'custom-rxjs-operator',
-    component: CustomOperatorComponent
+    loadChildren: () => import('./custom-rxjs-operators/custom-operator.module').then(m => m.CustomOperatorModule)
   },
   {
     path: 'routing',
-    loadChildren: () => import('./ng-routing/ng-routing.module').then(m => m.NgRoutingModule)
+    loadChildren: () => import('./routing/routing-demo.module').then(m => m.RoutingDemo)
   },
   {
     path: 'guards',
