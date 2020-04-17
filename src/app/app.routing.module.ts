@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'guards',
     loadChildren: () => import('./guards/guards.module').then(m => m.GuardsModule)
+  },
+  {
+    path: 'resolver',
+    loadChildren: () => import('./resolver/resolver.module').then(m => m.ResolverModule)
   }
 ];
 

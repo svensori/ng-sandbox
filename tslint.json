@@ -49,8 +49,7 @@
       "debug",
       "info",
       "time",
-      "timeEnd",
-      "trace"
+      "timeEnd"
     ],
     "no-empty": false,
     "no-inferrable-types": [
