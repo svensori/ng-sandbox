@@ -1,7 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { DemoResolver } from './demo-resolver/demo-resolver.resolver';
 import { DemoResolverGuard } from './demo-resolver/demo-resolver.guard';
+import { DemoResolver } from './demo-resolver/demo-resolver.resolver';
 import { ResolverComponent } from './resolver.component';
 
 const routes: Routes = [

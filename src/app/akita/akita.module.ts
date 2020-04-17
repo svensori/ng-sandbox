@@ -10,10 +10,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { AkitaRoutingModule } from './akita.routing.module';
 import { TodosPageComponent } from './components/todos-page.component';
 import { TodosService } from './services/todos.service';
 import { AppStoreModule } from './stores/stores.module';
-import { AkitaRoutingModule } from './akita.routing.module';
 
 @NgModule({
   declarations: [

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { QueryEntity } from '@datorama/akita';
 
 import { Todo } from '../models/todo.model';
-import { TodoState, TodosStore } from '../stores/todos.store';
+import { TodosStore, TodoState } from '../stores/todos.store';
 
 @Injectable({
     providedIn: 'root'
