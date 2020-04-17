@@ -3,7 +3,6 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 
 import { FORM_ERRORS } from './constants/common-errors.enum';
 import { UserLoginValidators } from './validators/login.validator';
-import { BaseUi } from 'src/shared/models/ui.model';
 
 @Component({
   selector: 'app-ng-form',

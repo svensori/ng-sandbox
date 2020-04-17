@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CustomOperatorModule } from './custom-rxjs-operators/custom-operator.module';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,9 @@ import { Router } from '@angular/router';
 export class AppComponent {
 
   routes = this.router.config;
+  console = console;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.console.log(this.routes);
+  }
 }

@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 import { Todo } from '../models/todo.model';
 import { TodosQuery } from '../query/todos.query';
 import { TodosService } from '../services/todos.service';
-import { BaseUi } from 'src/shared/models/ui.model';
 
 @Component({
   selector: 'app-todos-page',
@@ -13,10 +12,6 @@ import { BaseUi } from 'src/shared/models/ui.model';
   styleUrls: ['./todos-page.component.scss']
 })
 export class TodosPageComponent implements OnInit {
-  ui = {
-    title: 'Akita State Management'
-  } as BaseUi;
-
   todos$: Observable<Todo[]>;
   todosComplete$: Observable<Todo[]>;
   todosIncomplete$: Observable<Todo[]>;
