@@ -15,7 +15,6 @@ import { TodosService } from './services/todos.service';
 import { AppStoreModule } from './stores/stores.module';
 import { AkitaRoutingModule } from './akita.routing.module';
 
-
 @NgModule({
   declarations: [
     TodosPageComponent

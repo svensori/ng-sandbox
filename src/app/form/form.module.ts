@@ -9,7 +9,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormDemoComponent } from './form.component';
 import { FormDemoRoutingModule } from './form.routing.module';
 
-
 @NgModule({
   declarations: [FormDemoComponent],
   imports: [

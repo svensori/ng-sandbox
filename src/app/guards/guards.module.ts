@@ -10,8 +10,6 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { GuardsComponent } from './guards.component';
 import { GuardsRoutingModule } from './guards.routing.module';
 
-
-
 @NgModule({
   declarations: [
     GuardsComponent,

@@ -1,6 +1,5 @@
 import { Observable } from 'rxjs';
 
-
 /**
  * Custom operator
  */
