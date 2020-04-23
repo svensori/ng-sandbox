@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'resolver',
     loadChildren: () => import('./resolver/resolver.module').then(m => m.ResolverModule)
+  },
+  {
+    path: 'pusher',
+    loadChildren: () => import('./pusher/pusher.module').then(m => m.PusherModule)
   }
 ];
 
