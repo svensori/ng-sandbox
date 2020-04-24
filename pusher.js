@@ -11,13 +11,13 @@ const pusher = new Pusher({
   key: 'ae76d17749f7d459a7ef',
   secret: '4d3f2ac2afa8e5d386bc',
   cluster: 'ap1',
-  useTLS: true
+  forceTLS: true
 });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'
@@ -25,11 +25,19 @@ app.use((req, res, next) => {
   next();
 });
 
+setInterval(() => {
+  pusher.trigger('my-channel', 'my-event', { test: 'test me'});
+}, 1000);
+
 app.post('/ping', (req, res) => {
   const { lat, lng } = req.body;
-  const data = { lat, lng };
+  const data = { 
+    lat: lat.toString(), 
+    lng: lng.toString() 
+  };
   pusher.trigger('my-channel', 'my-event', data);
-  res.json(data);
+  console.log(data);
+  res.status(200).send(data);
 });
 
 app.listen(port, () => {

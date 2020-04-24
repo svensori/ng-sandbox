@@ -2,6 +2,7 @@ import { AgmCoreModule } from '@agm/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,6 +15,7 @@ import { PusherService } from './service/pusher.service';
   imports: [
     CommonModule,
     HttpClientModule,
+    MatToolbarModule,
     PusherRoutes,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6C4chhrR2SyusPKruPil7m-CKl3U4UeI',

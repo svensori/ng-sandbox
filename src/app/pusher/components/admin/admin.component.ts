@@ -14,7 +14,6 @@ declare const google;
   styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent implements OnInit {
-
   readonly lat = OFFICE_LATITUDE;
   readonly lng = OFFICE_LONGITUDE;
   readonly paths = OFFICE_POLYGON;

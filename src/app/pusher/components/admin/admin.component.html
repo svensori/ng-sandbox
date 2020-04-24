@@ -1,11 +1,7 @@
 <div class="main">
   <div class="mat-headline">Infor Manila's Geofence</div>
 
-  <agm-map 
-    [latitude]="lat" 
-    [longitude]="lng" 
-    [zoom]="18"
-    [mapDraggable]="false">
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="18">
     <agm-polygon [paths]="paths" [strokeWeight]="2"></agm-polygon>
     <agm-marker [latitude]="markerLat" [longitude]="markerLng"></agm-marker>
   </agm-map>
