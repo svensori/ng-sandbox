@@ -1,5 +1,10 @@
-<app-header [username]="username"></app-header>
 <div class="content">
-  <h2>Welcome to "The Ranch"</h2>
-  <h6>Enable location to get updates</h6>
+  <div class="mat-headline">Welcome to Pusher Geofence Demo</div>
+  <div class="mat-body-1">Enable location to get updates</div>
+  <br />  
+  <div class="mat-body-2">Position history:</div>
+
+<pre>
+{{positionHistory | json}}
+</pre>
 </div>

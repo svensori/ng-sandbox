@@ -4,11 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AdminComponent } from './components/admin/admin.component';
-import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { PusherComponent } from './pusher.component';
-import { PusherRoutes } from './pusher.routing.module';
-import { PusherService } from './pusher.service';
+import { PusherRoutes } from './pusher.routing';
+import { GeolocationService } from './service/geolocation.service';
+import { PusherService } from './service/pusher.service';
 
 @NgModule({
   imports: [
@@ -16,7 +16,6 @@ import { PusherService } from './pusher.service';
     HttpClientModule,
     PusherRoutes,
     AgmCoreModule.forRoot({
-      // please get your own API key here: https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
       apiKey: 'AIzaSyB6C4chhrR2SyusPKruPil7m-CKl3U4UeI',
       libraries: ['geometry']
     })
@@ -24,9 +23,11 @@ import { PusherService } from './pusher.service';
   declarations: [
     PusherComponent,
     AdminComponent,
-    HeaderComponent,
     HomeComponent
   ],
-  providers: [PusherService]
+  providers: [
+    PusherService,
+    GeolocationService
+  ]
 })
 export class PusherModule { }

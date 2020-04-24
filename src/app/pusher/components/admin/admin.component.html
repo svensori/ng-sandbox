@@ -1,14 +1,13 @@
-<app-header [username]="username"></app-header>
 <div class="main">
-  <h3>Admin</h3>
-  <agm-map [latitude]="center.lat" [longitude]="center.lng" [zoom]="zoom">
-    <agm-marker [latitude]="center.lat" [longitude]="center.lng"></agm-marker>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="18">
+    <agm-polygon [paths]="paths" [strokeWeight]="2"></agm-polygon>
+    <agm-marker [latitude]="markerLat" [longitude]="markerLng"></agm-marker>
   </agm-map>
-  <h4>Location Alerts</h4>
-  <div class="alert" [hidden]="!showAlert">
-    <p>This user has left the ranch</p>
-  </div>
-  <div class="location alert" [hidden]="!showLocationUpdate">
-    <p>{{message}}</p>
-  </div>
+
+  <ng-container *ngIf="message">
+    <div class="mat-title">Location Alert</div>
+    <div class="mat-subheading-2">
+      {{message}}
+    </div>
+  </ng-container>
 </div>

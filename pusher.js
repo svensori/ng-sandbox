@@ -11,7 +11,7 @@ const pusher = new Pusher({
   key: 'ae76d17749f7d459a7ef',
   secret: '4d3f2ac2afa8e5d386bc',
   cluster: 'ap1',
-  useTlS: true
+  useTLS: true
 });
 
 app.use(bodyParser.json());
@@ -27,11 +27,8 @@ app.use((req, res, next) => {
 
 app.post('/ping', (req, res) => {
   const { lat, lng } = req.body;
-  const data = {
-    lat,
-    lng,
-  };
-  pusher.trigger('location', 'ping', data);
+  const data = { lat, lng };
+  pusher.trigger('my-channel', 'my-event', data);
   res.json(data);
 });
 
