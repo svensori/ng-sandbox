@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import Pusher from 'pusher-js';
 import * as PusherTypes from 'pusher-js';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,8 @@ export class PusherService {
   constructor() {
     Pusher.logToConsole = true;
 
-    const pusher = new Pusher('ae76d17749f7d459a7ef', {
-      cluster: 'ap1',
+    const pusher = new Pusher(environment.pusher.key, {
+      cluster: environment.pusher.cluster,
       forceTLS: true
     });
 

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { environment } from 'src/environments/environment';
 
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,7 +19,7 @@ import { PusherService } from './service/pusher.service';
     MatToolbarModule,
     PusherRoutes,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB6C4chhrR2SyusPKruPil7m-CKl3U4UeI',
+      apiKey: environment.agm.apiKey,
       libraries: ['geometry']
     })
   ],
