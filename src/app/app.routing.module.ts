@@ -29,6 +29,10 @@ const routes: Routes = [
   {
     path: 'pusher',
     loadChildren: () => import('./pusher/pusher.module').then(m => m.PusherModule)
+  },
+  {
+    path: 'socket-io',
+    loadChildren: () => import('./socket-io/socket-io.module').then(m => m.SocketIoModule)
   }
 ];
 

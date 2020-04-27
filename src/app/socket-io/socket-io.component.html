@@ -1,0 +1,22 @@
+<mat-toolbar>Socket IO Demo</mat-toolbar>
+
+<br>
+
+<div class="mat-caption">
+  When running this demo, please run <code>npm run start:socket-io</code> on a separate terminal to enable the local
+  socket-io server.
+</div>
+
+<div class="field-group">
+  <mat-form-field>
+    <input matInput placeholder="Type your message here" [formControl]="inputControl">
+  </mat-form-field>
+  <button mat-raised-button (click)="sendMessage()">Send</button>
+</div>
+
+<br>
+
+<div class="mat-title">Messages:</div>
+<div class="messages mat-small">
+  <pre *ngFor="let message of messages">{{message.senderName}}: {{message.content}}</pre>
+</div>

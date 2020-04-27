@@ -10,5 +10,9 @@ export const environment: EnvironmentConfig = {
   },
   agm: {
     apiKey: 'AIzaSyB6C4chhrR2SyusPKruPil7m-CKl3U4UeI'
+  },
+  socketIoConfig: {
+    url: 'http://localhost:3000',
+    options: {}
   }
 };

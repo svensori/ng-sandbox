@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.field-group {
+  width: 100%;
+
+  mat-form-field {
+    display: block;
+  }
+}

@@ -1,13 +1,19 @@
 <div class="content">
   <mat-toolbar>Pusher Geofence Demo</mat-toolbar>
   <br />
-  <div class="mat-body-strong">
-    Open another window and go to <a routerLink="admin" target="_blank">pusher/admin</a> and make sure to allow location updates.
+  <div class="mat-caption">
+    When running this demo, please run <code>npm run start:pusher</code> on a separate terminal
+    to run the local pusher server.
   </div>
-  <br />  
+  <br />
+  <div class="mat-caption">
+    Open another window and go to <a routerLink="admin" target="_blank">pusher/admin</a> and make sure to allow location
+    updates.
+  </div>
+  <br />
   <div class="mat-caption">Position history:</div>
 
-<pre>
+  <pre>
 {{positionHistory | json}}
 </pre>
 </div>
