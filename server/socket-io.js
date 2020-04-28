@@ -6,8 +6,7 @@ let connectionCount = 0;
 const SocketEvent = {
   MESSAGE: 'message-event'
 };
-Object.freeze(SocketEvents);
-
+Object.freeze(SocketEvent);
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
